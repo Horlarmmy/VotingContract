@@ -1,18 +1,12 @@
-const hre = require("hardhat");
+const { ethers } = require("hardhat");
 
 async function main() {
-  /**
-   * @dev make sure the first argument has the same name as your contract in the Hello_swtr.sol file
-   * @dev the second argument must be the message we want to set in the contract during the deployment process
-   */
-  const contract = await hre.ethers.deployContract("Swisstronik", ["Hello Swisstronik!!"]);
+  const Voting = await ethers.deployContract("Voting", [["Candidate1", "Candidate2", "Candidate3"]]);;
+  await Voting.deployed();
 
-  await contract.waitForDeployment();
-
-  console.log(`Swisstronik contract deployed to ${contract.target}`);
+  console.log(`Voting Contract was deployed to ${Voting.address}`);
 }
 
-//DEFAULT BY HARDHAT:
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.
 main().catch((error) => {
