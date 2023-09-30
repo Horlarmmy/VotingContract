@@ -24,7 +24,7 @@ Create `.env` file from example
 ```sh
 cp example.env .env
 ```
-Add `PRIVATE_KEY` in `.env` with actual private key to interact with network. If you're using other network than local testnet you also should replace `url` in `hardhat.config.ts`
+Add `PRIVATE_KEY` in `.env` with actual private key to interact with network. If you're using other network than local testnet you also should replace `url` in `hardhat.config.js`
 
 To run tests, use following command:
 
@@ -32,7 +32,7 @@ To run tests, use following command:
 npm run test
 ```
 
-To deploy contracts, use check `scripts/deploy.ts` script and use following command:
+To deploy contracts, use check `scripts/deploy.js` script and use following command:
 ```sh
 npm run deploy
 ```
