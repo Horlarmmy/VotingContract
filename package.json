@@ -1,0 +1,9 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0"
+  },
+  "dependencies": {
+    "@swisstronik/swisstronik.js": "^1.0.0"
+  }
+}
